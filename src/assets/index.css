@@ -1,0 +1,156 @@
+.main-layout {
+    position: relative;
+    min-height: 50vh
+}
+
+.empty-layout {
+    /*display: -webkit-flex;*/
+    /*display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*-webkit-flex-direction: column;*/
+    /*-ms-flex-direction: column;*/
+    /*flex-direction: column;*/
+    /*-webkit-align-items: center;*/
+    /*-ms-flex-align: center;*/
+    /*align-items: center;*/
+    /*padding-top: 5rem;*/
+    /*height: 100vh*/
+}
+
+.app-contract-layout {
+    position: relative;
+    min-height: 100vh
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px !important;
+    z-index: 1000;
+}
+
+.nav-wrapper, .navbar-left {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.personicon {
+    font-size: 12px;
+    margin-left: 160px;
+}
+
+.user {
+    margin-left: 10px;
+}
+
+.lockicon {
+    margin-left: 100px;
+    font-size: 12px
+}
+
+.app-sidenav.open {
+    position: absolute;
+    top: 32px;
+    width: 129px;
+    bottom: 0 !important;
+    height: 100% !important;
+    overflow:  hidden;
+}
+
+.app-sidenav.open {
+    transform: translateX(0);
+}
+
+.wasselected {
+    background-color: white !important;
+}
+
+.wasselectedtext {
+    color: grey !important;
+}
+
+.sidebaricon {
+    margin-top: 20px;
+    font-size:32px;
+    color: white;
+    margin-left: 20px;
+}
+
+.sidebaricon.open {
+    color: grey ;
+}
+
+.open {
+    color: grey;
+}
+
+.liroute.open {
+    background-color: white;
+}
+
+.routertext{
+    color: white;
+    line-height: 10px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.sidenav li>a {
+    color: rgba(0, 0, 0, 0.87);
+    /*display: block;*/
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+    box-shadow: none;
+}
+
+.add-contract-table {
+    margin-top: 30px;
+    margin-left: 200px;
+    width: 1400px;
+    height: auto !important;
+    font-size: 10pt;
+}
+
+.tablehead {
+    background: rgb(51, 102, 153);
+    color: white;
+}
+
+.rowselected {
+    background: rgb(115, 230, 0) !important;
+    color: white;
+}
+
+.buttonnextstep {
+    margin-left: 1429px;
+    margin-top: 20px;
+    background: rgb(255, 0, 128);
+}
+
+.buttonnextstep.step-2 {
+    margin-left: 1400px;
+}
+
+.step-3 {
+    margin-left: 200px;
+    margin-top: 200px;
+}
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@ export default {
         updatePharmacies(state, updatedPharmacies){
             if(state.pharmacies.length === 0){
                 updatedPharmacies.forEach(el => el.Selected = false)
-                updatedPharmacies.forEach(el => el.address_1 + " " + el.address_2)
+                updatedPharmacies.forEach(el => el.address = el.address_1 + " " + el.address_2)
                 state.pharmacies = updatedPharmacies
             }
             else {

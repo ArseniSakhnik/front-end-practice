@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="margin-left: 200px; font-size: 20pt; margin-top: 50px">1: Select Legal Entity</h1>
+    <h2 class="heading">1: Select Legal Entity</h2>
     <div class="app-contract-layout">
       <table class="striped highlight add-contract-table">
         <thead>
@@ -13,10 +13,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="l in getAllLegalEntities" :key="l.legalEntityID" @click="selectLegalEntity(l.legalEntityID)"
-            style="cursor: pointer" :class="{rowselected: l.Selected}">
+        <tr class="cursor-pointer" v-for="l in getAllLegalEntities" :key="l.legalEntityID" @click="selectLegalEntity(l.legalEntityID)"
+            :class="{rowselected: l.Selected}">
           <td width="5%" v-if="l.Selected">
-            <i class="fa fa-check" style="font-size:24px"></i>
+            <i class="fa fa-check icon"></i>
           </td>
           <td width="5%" v-else></td>
           <td>{{l.legalEntityName}}</td>
@@ -27,14 +27,14 @@
         </tbody>
       </table>
       <div v-if="getLegalentityWasSelected">
-        <router-link to="/Step-2" style="color:white">
-          <button class="btn buttonnextstep">
+        <router-link to="/Step-2">
+          <button class="btn button-next-step">
             Select Pharmacies
           </button>
         </router-link>
       </div>
       <div v-else>
-        <button class="btn buttonnextstep" @click="wrongClick">
+        <button class="btn button-next-step" @click="wrongClick">
           Select Pharmacies
         </button>
       </div>
@@ -66,7 +66,7 @@
                 })
                 this.error = false;
             },
-            wrongClick(){
+            wrongClick() {
                 alert('You have to select one Legal Entity')
             }
         }

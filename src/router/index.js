@@ -7,27 +7,32 @@ const routes = [
     {
         path: '/',
         name: 'addcontract',
-        component: () => import('@/views/AddContract.vue')
+        component: () => import('@/components/AddContract.vue')
     },
     {
         path: '/dashboard',
         name: 'Dashboard',
-        component: () => import('@/views/Dashboard.vue')
+        component: () => import('@/components/Dashboard.vue')
     },
     {
         path: '/open-tasks',
         name: 'Open-tasks',
-        component: () => import('@/views/OpenTasks.vue')
+        component: () => import('@/components/OpenTasks.vue')
     },
     {
         path: '/Step-2',
         name: 'Step-2',
-        component: () => import('@/views/AddContractStep2')
+        component: () => import('@/components/AddContractStep2')
     },
     {
         path: '/Step-3',
         name: 'Step-3',
-        component: () => import('@/views/AddContractStep3')
+        component: () => import('@/components/AddContractStep3')
+    },
+    {
+        path: '/Results',
+        name: 'Results',
+        component: () => import('@/components/Results')
     }
 ]
 

@@ -35,15 +35,20 @@ export default {
         getAllLegalEntities(state){
             return state.legalEntities
         },
-        // getLegalEntityById(state, id){
-        //     return state.legalEntities.filter(el => el.legalEntityID === id)
-        // }
         getLegalEntityById: (state) => (id) => {
             return state.legalEntities.filter(el => el.legalEntityID === id)[0]
         },
 
         getSelectedLegalEntity(state){
             return state.legalEntities.filter(el => el.Selected === true)[0].legalEntityID
+        },
+
+        getLegalEntity(state){
+            return state.legalEntities.filter(el => el.Selected === true)[0]
+        },
+
+        getSelectedLegalEntityName(state){
+            return state.legalEntities.filter(el => el.Selected === true)[0].legalEntityName
         },
 
         getLegalentityWasSelected(state){

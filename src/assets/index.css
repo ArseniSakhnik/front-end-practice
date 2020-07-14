@@ -60,7 +60,7 @@
     width: 129px;
     bottom: 0 !important;
     height: 100% !important;
-    overflow:  hidden;
+    overflow: hidden;
 }
 
 .app-sidenav.open {
@@ -77,13 +77,13 @@
 
 .sidebaricon {
     margin-top: 20px;
-    font-size:32px;
+    font-size: 32px;
     color: white;
     margin-left: 20px;
 }
 
 .sidebaricon.open {
-    color: grey ;
+    color: grey;
 }
 
 .open {
@@ -94,21 +94,95 @@
     background-color: white;
 }
 
-.routertext{
+.form-text {
+    margin-left: 0px;
+    margin-top: 20px;
+    float: left;
+}
+
+.form-text.form2 {
+    display: inline-block
+}
+
+.form3 {
+    margin-left: 0px;
+    margin-top: 0px;
+    float: left
+}
+
+.form4 {
+    width: 100px;
+    margin-left: 180px;
+    height: 30px
+}
+
+.form5 {
+    width: 100px;
+    margin-left: 50px;
+    display: inline
+}
+
+.mydatepicker {
+    width: 105px;
+    margin-left: 45px;
+    float: left;
+    cursor: pointer
+}
+
+.form6 {
+    margin-top: 20px
+}
+
+.form7 {
+    margin-left: 0px;
+    margin-top: 20px;
+    display: inline-block
+}
+
+.calendar-icon {
+    margin-top: 20px;
+    display: inline-block
+}
+
+.form8 {
+    margin-top: 10px
+}
+
+.form9 {
+    color: white;
+}
+
+.form10 {
+    margin-left: 1000px
+}
+
+.form11 {
+    margin-left: 500px;
+    margin-top: 300px
+}
+
+.routertext {
     color: white;
     line-height: 10px;
     white-space: nowrap;
     display: inline-block;
-    margin-bottom: 0px;
+    margin-bottom: 0px !important;
+    margin-left: 20px;
+    display: block;
 }
 
-.sidenav li>a {
+.sidenav li > a {
     color: rgba(0, 0, 0, 0.87);
     /*display: block;*/
     font-size: 14px;
     font-weight: 500;
     height: 48px;
     line-height: 48px;
+}
+
+.form12 {
+    margin-left: 500px;
+    margin-top: 300px
 }
 
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
@@ -133,22 +207,63 @@
     color: white;
 }
 
-.buttonnextstep {
+.button-next-step {
     margin-left: 1429px;
     margin-top: 20px;
     background: rgb(255, 0, 128);
+    display: block;
+
 }
 
-.buttonnextstep.step-2 {
+.button-next-step.step-2 {
     margin-left: 1400px;
 }
 
 .step-3 {
     margin-left: 200px;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
+.button-back-step {
+    background: rgb(255, 0, 128);
+    margin-left: 200px;
+    margin-top: 20px;
+    float: left;
+    background: grey;
+    width: 150px;
+    display: block;
+    color: white
+}
 
+.button-back-step.step-3 {
+    margin-top: 20px;
+    margin-left: 0px;
+}
+
+.button-next-step.step-3 {
+    margin-top: 20px;
+    margin-left: 1400px;
+}
+
+.heading {
+    margin-left: 200px;
+    font-size: 20pt;
+    margin-top: 50px;
+    font-weight: bold
+}
+
+.icon {
+    font-size: 24px
+}
+
+.error-data-uploading {
+    margin-left: 500px;
+    margin-top: 300px
+}
+
+.cursor-pointer {
+    cursor: pointer
+}
 
 
 

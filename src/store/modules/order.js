@@ -6,10 +6,11 @@ export default {
         contractEndDate: null,
         location: '',
         contractorName: '',
+        selectedLegalEntities: null,
+        selectedPharmacy: []
     },
     mutations: {
         setContractType(state, payload){
-            console.log('something')
             state.contractType = payload.contractType
         },
         setServiceAgreement(state, payload){
@@ -19,7 +20,6 @@ export default {
             state.contractStartDate = payload.contractStartDate
         },
         setContractEndDate(state, payload){
-            console.log(payload)
             state.contractEndDate = payload.contractEndDate
         },
         setLocation(state, payload){
@@ -40,7 +40,6 @@ export default {
             ctx.commit('setContractStartDate', payload)
         },
         setContractEndDate(ctx, payload){
-            console.log('HERE')
             ctx.commit('setContractEndDate', payload)
         },
         setLocation(ctx, payload){
@@ -53,6 +52,14 @@ export default {
     getters: {
         getOrder(state){
             return state
+        },
+        getOrderWasFilled(state){
+            return state.serviceAgreement != ''
+                && state.contractStartDate != null
+                && state.contractEndDate != null
+                && state.location != ''
+                && state.contractorName != null
+                && state.contractorName != null
         }
     }
 }

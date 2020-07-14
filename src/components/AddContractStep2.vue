@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 style="margin-left: 200px; font-size: 20pt; margin-top: 50px">2: Select Legal Entity</h1>
+  <div v-if="getLegalentityWasSelected">
+    <h2 class="heading">2: Select Legal Entity for "{{getSelectedLegalEntityName}}"</h2>
     <table class="striped highlight add-contract-table">
       <thead>
       <tr class="tablehead">
@@ -12,10 +12,10 @@
       </tr>
       </thead>
       <tbody>
-      <tr v-for="p in getPharmaciesByLegalEntityId" :key="p.pharmaID" @click="selectPharmacy(p.pharmaID)"
-          style="cursor: pointer" :class="{rowselected: p.Selected}">
+      <tr class="cursor-pointer" v-for="p in getPharmaciesByLegalEntityId" :key="p.pharmaID" @click="selectPharmacy(p.pharmaID)"
+          :class="{rowselected: p.Selected}">
         <td width="5%" v-if="p.Selected">
-          <i class="fa fa-check" style="font-size:24px"></i>
+          <i class="fa fa-check icon"></i>
         </td>
         <td width="5%" v-else></td>
         <td>{{p.pharmaName}}</td>
@@ -25,18 +25,26 @@
       </tr>
       </tbody>
     </table>
+    <router-link to="/">
+      <button class="btn button-back-step">
+        Back
+      </button>
+    </router-link>
     <div v-if="getPharmacyWasSelected">
-      <router-link to="/Step-3" style="color:white">
-        <button class="btn buttonnextstep step-2">
+      <router-link to="/Step-3">
+        <button class="btn button-next-step step-2">
           Enter Contract Terms
         </button>
       </router-link>
     </div>
     <div v-else>
-      <button class="btn buttonnextstep step-2" @click="wrongClick">
+      <button class="btn button-next-step step-2" @click="wrongClick">
         Enter Contract Terms
       </button>
     </div>
+  </div>
+  <div class="error-data-uploading" v-else>
+    <h3>Items were not choose on step 1!</h3>
   </div>
 </template>
 
@@ -45,7 +53,7 @@
 
     export default {
         name: "AddContractStep2",
-        computed: mapGetters(['getPharmaciesByLegalEntityId', 'getPharmacyWasSelected']),
+        computed: mapGetters(['getPharmaciesByLegalEntityId', 'getPharmacyWasSelected', 'getSelectedLegalEntityName', 'getLegalentityWasSelected']),
         mounted() {
             this.$store.dispatch('fetchPharmacies')
         },
